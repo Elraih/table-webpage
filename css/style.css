@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Freeman;
+    src: url(../fonts/Arvo-Regular.ttf);
+}
+
+:root {
+    font-family: arvo;
+    --bg-blue: #3FA2F6;
+    --bg-gray: rgb(248, 248, 248);
+    --bg-off-wihte: rgb(226, 226, 226);
+    --white-clr: #fff;
+    --gray-font: rgb(91, 92, 92);
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+section {
+    text-transform: capitalize;
+}
+
+.container {
+    width: 80%;
+    margin-inline: auto;
+}
+
+/* ========= end of golobal selector ============ */
+
+
+/* ============ form div and input ============= */
+.form {
+    width: 70%;
+    margin: auto;
+    position: relative;
+    margin-block: 40px;
+}
+
+input {
+    width: 100%;
+    height: 35px;
+    border: 2px var(--gray-font) solid;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 10px;
+}
+
+label {
+    position: absolute;
+    top: 18%;
+    left: 10px;
+    padding: 2px;
+    transition: all 0.3s;
+}
+
+input:focus+label {
+    background-color: var(--white-clr);
+    top: -30%;
+    left: 5px;
+}
+
+input:focus::placeholder {
+    color: var(--gray-font);
+}
+
+input::placeholder {
+
+    color: transparent;
+}
+
+/* ============= table style ============ */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    width: fit-content;
+    text-align: center;
+}
+
+tr th {
+    background-color: var(--bg-blue);
+    color: var(--white-clr);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--bg-gray);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--bg-off-wihte);
+}
+
+table button {
+    background-color: var(--bg-blue);
+    color: var(--white-clr);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+table button:hover {
+    background-color: var(--bg-blue);
+}
+
+/* ======== not found image ========== */
+.not-found {
+    width: 60%;
+    margin-inline: auto;
+    display: none;
+}
+
+.show {
+    display: block;
+}
